@@ -39,6 +39,11 @@ export const useAuthStore = create<AuthState>()(
             isAuthenticated: false,
 
             login: async (credentials) => {
+                try {
+                    await AsyncStorage.removeItem('currentTenantSlug');
+                } catch (e) {
+                    console.warn('Could not clear tenant slug before login:', e);
+                }
                 const response = await AuthenticationService.login(credentials);
                 set({
                     user: response,
@@ -62,6 +67,11 @@ export const useAuthStore = create<AuthState>()(
             },
 
             register: async (data) => {
+                try {
+                    await AsyncStorage.removeItem('currentTenantSlug');
+                } catch (e) {
+                    console.warn('Could not clear tenant slug before registration:', e);
+                }
                 const response = await AuthenticationService.register(data);
                 set({
                     user: response,
