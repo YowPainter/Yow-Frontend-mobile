@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
 import { useAuthStore } from '../../store/authStore';
-import { Settings, LayoutGrid, Heart, History, LogOut, ChevronRight, ChevronLeft } from 'lucide-react-native';
+import { Settings, LayoutGrid, Heart, History, LogOut, ChevronRight, ChevronLeft, MessageSquare } from 'lucide-react-native';
 import AmbientBackground from '../../components/AmbientBackground';
 
 export default function ProfileTab() {
@@ -87,6 +87,17 @@ export default function ProfileTab() {
               <ChevronRight size={20} color="#C26D5C" />
             </TouchableOpacity>
           )}
+
+          <TouchableOpacity 
+            onPress={() => router.push('/chat')}
+            className="flex-row items-center bg-white p-5 rounded-[28px] border border-black/5 shadow-sm"
+          >
+            <View className="w-10 h-10 rounded-xl bg-purple-50 items-center justify-center">
+              <MessageSquare size={20} color="#8B5CF6" />
+            </View>
+            <Text className="flex-1 ml-4 font-serif text-base">Messagerie</Text>
+            <ChevronRight size={18} color="#9A8880" />
+          </TouchableOpacity>
 
           <TouchableOpacity className="flex-row items-center bg-white p-5 rounded-[28px] border border-black/5 shadow-sm">
             <View className="w-10 h-10 rounded-xl bg-pink-50 items-center justify-center">

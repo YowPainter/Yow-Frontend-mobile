@@ -3,6 +3,5 @@
   "compilerOptions": {
     "strict": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "nativewind-env.d.ts"],
-  "exclude": ["node_modules", "YP-frontend"]
+  "include": ["**/*.ts", "**/*.tsx", "nativewind-env.d.ts"]
 }

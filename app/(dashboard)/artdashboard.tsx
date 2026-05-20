@@ -21,8 +21,9 @@ import { toast } from '../../lib/toast';
 import { uploadToCloudinary } from '../../lib/cloudinary';
 import * as ImagePicker from 'expo-image-picker';
 import AmbientBackground from '../../components/AmbientBackground';
+import { WalletTab } from '../../components';
 
-type DashTab = 'oeuvres' | 'evenements' | 'boutique';
+type DashTab = 'oeuvres' | 'evenements' | 'boutique' | 'portefeuille';
 
 /* ─── Status Badge ─── */
 function StatusBadge({ status }: { status?: string }) {
@@ -321,6 +322,7 @@ export default function ArtistDashboard() {
     { id: 'oeuvres' as DashTab, label: 'Œuvres', icon: ImageIcon },
     { id: 'evenements' as DashTab, label: 'Événements', icon: Calendar },
     { id: 'boutique' as DashTab, label: 'Boutique', icon: ShoppingBag },
+    { id: 'portefeuille' as DashTab, label: 'Wallet', icon: DollarSign },
   ];
 
   return (
@@ -553,6 +555,9 @@ export default function ArtistDashboard() {
               </Text>
             </View>
           )}
+
+          {/* ── Portefeuille ── */}
+          {tab === 'portefeuille' && <WalletTab />}
 
         </View>
 
