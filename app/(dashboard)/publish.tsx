@@ -91,10 +91,10 @@ export default function PublishArtwork() {
     <SafeAreaView className="flex-1 bg-background relative overflow-hidden">
       <AmbientBackground />
       <KeyboardAvoidingView 
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
+        behavior="padding" 
         className="flex-1"
       >
-        <View className="px-6 py-4 flex-row items-center border-b border-black/5">
+        <View className="px-6 pt-3 pb-4 flex-row items-center border-b border-black/5">
           <TouchableOpacity onPress={() => router.back()} className="w-10 h-10 items-center justify-center">
             <ChevronLeft size={24} color="#1A1A1A" />
           </TouchableOpacity>

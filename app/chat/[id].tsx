@@ -118,8 +118,8 @@ export default function ChatRoom() {
 
   return (
     <KeyboardAvoidingView 
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
-      keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}
+      behavior="padding"
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 80}
       className="flex-1 bg-background relative overflow-hidden"
     >
       <AmbientBackground />

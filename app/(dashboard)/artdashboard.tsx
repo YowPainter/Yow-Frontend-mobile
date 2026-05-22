@@ -87,8 +87,8 @@ function CreateEventModal({ visible, onClose, onCreated }: {
 
   return (
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet">
-      <SafeAreaView className="flex-1 bg-background">
-        <View className="flex-row justify-between items-center px-6 py-4 border-b border-black/5">
+      <View className="flex-1 bg-background">
+        <View className="flex-row justify-between items-center px-6 pt-6 pb-4 border-b border-black/5">
           <Text className="font-serif text-xl text-foreground">Nouvel Événement</Text>
           <TouchableOpacity onPress={onClose}><X size={24} color="#9A8880" /></TouchableOpacity>
         </View>
@@ -145,7 +145,7 @@ function CreateEventModal({ visible, onClose, onCreated }: {
             )}
           </TouchableOpacity>
         </ScrollView>
-      </SafeAreaView>
+      </View>
     </Modal>
   );
 }
@@ -182,8 +182,8 @@ function EditProfileModal({ visible, onClose, currentBio, currentName, onSaved }
 
   return (
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet">
-      <SafeAreaView className="flex-1 bg-background">
-        <View className="flex-row justify-between items-center px-6 py-4 border-b border-black/5">
+      <View className="flex-1 bg-background">
+        <View className="flex-row justify-between items-center px-6 pt-6 pb-4 border-b border-black/5">
           <Text className="font-serif text-xl text-foreground">Modifier le profil</Text>
           <TouchableOpacity onPress={onClose}><X size={24} color="#9A8880" /></TouchableOpacity>
         </View>
@@ -225,7 +225,7 @@ function EditProfileModal({ visible, onClose, currentBio, currentName, onSaved }
             )}
           </TouchableOpacity>
         </ScrollView>
-      </SafeAreaView>
+      </View>
     </Modal>
   );
 }

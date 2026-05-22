@@ -94,7 +94,7 @@ export default function ChatIndex() {
             placeholderTextColor="#9A8880"
             className="bg-white border border-black/10 rounded-2xl pl-12 pr-4 py-4 font-sans text-sm text-foreground shadow-sm"
           />
-          <Search size={16} color="#9A8880" className="absolute left-4" />
+          <Search size={16} color="#9A8880" className="absolute left-4" style={{ position: 'absolute', left: 16, top: '50%', marginTop: -8 }} />
         </View>
 
         {/* Search Results / suggestions & contacts */}

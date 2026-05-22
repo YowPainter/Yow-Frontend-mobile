@@ -143,7 +143,7 @@ export default function WalletTab() {
                 placeholderTextColor="#9A8880"
                 className="bg-foreground/[0.03] border border-black/10 rounded-2xl px-5 py-4 font-sans text-sm text-foreground"
               />
-              <Text className="absolute right-4 font-sans text-[10px] font-bold text-muted">XAF</Text>
+              <Text className="absolute right-4 font-sans text-[10px] font-bold text-muted" style={{ position: 'absolute', right: 16, top: '50%', marginTop: -6 }}>XAF</Text>
             </View>
             <TouchableOpacity 
               onPress={handleWithdraw}
@@ -204,7 +204,7 @@ export default function WalletTab() {
                   placeholderTextColor="#9A8880"
                   className="bg-foreground/[0.02] border border-black/10 rounded-2xl pl-12 pr-4 py-4 font-sans text-sm text-foreground"
                 />
-                <Smartphone size={16} color="#9A8880" className="absolute left-4" />
+                <Smartphone size={16} color="#9A8880" className="absolute left-4" style={{ position: 'absolute', left: 16, top: '50%', marginTop: -8 }} />
               </View>
             </View>
 
