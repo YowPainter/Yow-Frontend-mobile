@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "YowPainter",
-    "slug": "yowpainter",
+    "slug": "yow-painter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -20,6 +20,8 @@
         "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#F2EFE9"
       },
+      "package": "com.landry_ng.yowpainter",
+      "versionCode": 1,
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
@@ -29,6 +31,13 @@
     "plugins": [
       "expo-router",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "93344c3b-b9d1-4e81-8bdf-290fae5441f2"
+      }
+    },
+    "owner": "landry_ng"
   }
 }
