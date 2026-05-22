@@ -51,15 +51,21 @@ export default function Login() {
 
   return (
     <KeyboardAvoidingView 
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'} 
+      behavior="padding" 
       className="flex-1 bg-background relative overflow-hidden"
     >
       <AmbientBackground />
       <StatusBar barStyle="light-content" />
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }} bounces={false} showsVerticalScrollIndicator={false}>
+      <ScrollView 
+        contentContainerStyle={{ flexGrow: 1 }} 
+        bounces={false} 
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
+        automaticallyAdjustKeyboardInsets={true}
+      >
         
         {/* Header Hero */}
-        <View className="h-[45%] w-full relative bg-ink">
+        <View className="h-[280px] w-full relative bg-ink">
           <Image 
             source={require('../../assets/images/african-login-art.png')} 
             className="w-full h-full opacity-70"
@@ -81,7 +87,7 @@ export default function Login() {
         </View>
 
         {/* Minimalist Form */}
-        <View className="flex-1 bg-background px-8 pt-8 pb-12">
+        <View className="bg-background px-8 pt-8 pb-12">
           
           {/* Email Field */}
           <View className="mb-8">

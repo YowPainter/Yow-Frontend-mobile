@@ -113,7 +113,7 @@ export default function Register() {
 
   return (
     <KeyboardAvoidingView 
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined} 
+      behavior="padding" 
       style={{ flex: 1 }}
     >
       <AmbientBackground />
@@ -123,10 +123,11 @@ export default function Register() {
         bounces={false} 
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
+        automaticallyAdjustKeyboardInsets={true}
       >
         
         {/* Header Hero */}
-        <View className="h-[30%] w-full relative bg-ink">
+        <View className="h-[220px] w-full relative bg-ink">
           <Image 
             source={require('../../assets/images/african-register-art.png')} 
             className="w-full h-full opacity-70"
@@ -148,7 +149,7 @@ export default function Register() {
         </View>
 
         {/* Form Container */}
-        <View className="flex-1 bg-background px-8 pt-6 pb-12">
+        <View className="bg-background px-8 pt-6 pb-12">
           
           {/* Role Selection */}
           <View className="flex-row gap-4 mb-8 p-1 bg-foreground/5 rounded-full">
