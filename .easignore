@@ -1,0 +1,13 @@
+# Exclude unnecessary files from EAS Build uploads
+node_modules/
+.git/
+.expo/
+*.log
+*.md
+.DS_Store
+Thumbs.db
+android/
+ios/
+__tests__/
+coverage/
+.nyc_output/
